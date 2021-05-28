@@ -1,23 +1,28 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
-import Header from "./Header";
-import Content from "./Content";
+import Grid from "@material-ui/core/Grid";
+import Gridder from "./components/Gridder";
 
 const App = () => {
   return (
-    <Grid container direction="column">
-      <Grid item>
-        <Header />
-      </Grid>
-      <Grid item container>
-        <Grid item xs={false} sm={2} />
-        <Grid item xs={12} sm={8}>
-          <Content />
+    <div>
+      <Grid container spacing={3} justify="space-between">
+        <Grid item xs={12} sm={6} md={4}>
+          <Gridder />
         </Grid>
-        <Grid item xs={false} sm={2} />
+        <Grid item xs={12} sm={6} md={4}>
+          <Gridder />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Gridder />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Gridder />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Gridder />
+        </Grid>
       </Grid>
-    </Grid>
+    </div>
   );
 };
-
 export default App;
